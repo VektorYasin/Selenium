@@ -38,9 +38,14 @@ public class Day03_Asertions {
     //Test execution stops if one of the assertion fails. This is hard assertion
     //test execution continues even if test verification fails.
     //verification is like "IF STATEMENT".
-        //assertion stops after assertion fails. Verification continues even after fails.
-        //Jnuit assertions are hard assertion. If statement is verification.
-        //TestNG has soft assertion as well.
+    //assertion stops after assertion fails. Verification continues even after fails.
+    //Jnuit assertions are hard assertion.
+    //If statement is verification.
+    //TestNG has soft assertion as well.
+    //hard assertion is mostly used in market. ıt is preffered.
+    //to fix the issue, use hard assertion.
+    //Hard assertion: If the execution stops in failure, it is called as hard assertion
+    //verification: if the execution continues, it is called as verification.
 
     }
 
