@@ -23,7 +23,9 @@ public class Day02_TitleVerification {
         //3.write Test scripts
         //maximize the window
         driver.manage().window().maximize();
+
         driver.get("https://www.techproeducation.com");
+
         //get title
         String actualTitle = driver.getTitle();
         String expectedTitle = "Techpro Education | Online It Courses & Bootcamps";

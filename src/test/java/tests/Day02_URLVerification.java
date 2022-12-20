@@ -7,12 +7,16 @@ public class Day02_URLVerification {
     public static void main(String[] args) {
 
     System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
+
     WebDriver driver = new ChromeDriver();
+
     driver.manage().window().maximize();
+
     driver.get("https://www.techproeducation.com");
 
     //Verify if homepage url is “https://www.techproeducation.com”
     String actualURL= driver.getCurrentUrl();
+
     String expectedURL="https://techproeducation.com/";
 
     if (actualURL.equals(expectedURL)) {
