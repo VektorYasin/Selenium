@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 public class Day09_FileDownloadTest extends TestBase {
     @Test
     public void downloadTest() throws InterruptedException {
+
         driver.get("https://testcenter.techproeducation.com/index.php?page=file-download");
 
         // Download junit-4.13-beta-3.jar file
