@@ -4,10 +4,7 @@ import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;//for screenshot
@@ -69,6 +66,28 @@ public abstract class TestBase {
     String path= System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+".png";
 
     FileUtils.copyFile(image, new File(path));
+
+    }
+
+
+
+    //    TAKE SCREENSHOT OF SPECIFIC ELEMENT WITH THIS REUSABLE METHOD
+
+    public void takeScreenshotOfTheElement(WebElement webElement) {
+
+//       1. Take screenshot
+        File image = webElement.getScreenshotAs(OutputType.FILE);
+
+//       2. Creating a Path and dynamic name for image
+        String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting the current local date and time
+        String path = System.getProperty("user.dir") + "/test-output/Screenshots/" + currentTime + ".png";//Where we save the image
+
+//       3. Saving image in the path
+        try {
+            FileUtils.copyFile(image, new File(path));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

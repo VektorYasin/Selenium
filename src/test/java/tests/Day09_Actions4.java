@@ -36,10 +36,10 @@ public class Day09_Actions4 extends TestBase {
         actions.dragAndDrop(source, target).perform();
     }
     /*
-    IF test FAILS;
-    1.check locator
-    2.check iframe
-    3.wait or synchronization issue
+    IF test FAILS;                  1.dragAndDrop(source, target) method
+    1.check locator                 2.clickAndHold(source).moveToElement(target).
+    2.check iframe                  3.clickAndHold(source).moveByOffset(160, 30)
+    3.wait or synchronization issue 4.dragAndDropBy(source, 160,30)
      */
     @Test
     public void clickAndHoldTest() {
@@ -58,8 +58,7 @@ public class Day09_Actions4 extends TestBase {
                 moveToElement(target).
                 build().
                 perform();
-        //holds the source and move it and drop to the target
-
+        //holds the source and move and drop to the target
 
     }
 
@@ -80,16 +79,14 @@ public class Day09_Actions4 extends TestBase {
                 build().
                 perform();
 
-
-
     }
 
     @Test
     public void dragAndDropBy(){
         driver.get("https://jqueryui.com/droppable/");
-        //move target element into the destinaton element
+        //move target element into the destination element
 
-        //below elements are in the iframe so switch to frame first
+        //below elements are in the iframe, so switch to frame first
         driver.switchTo().frame(0);//switching into the firs iframe
         WebElement source = driver.findElement((By.id("draggable")));
         WebElement target = driver.findElement(By.id("droppable"));
@@ -99,10 +96,5 @@ public class Day09_Actions4 extends TestBase {
                 dragAndDropBy(source, 160,30).
                 perform();
 
-
-
     }
-
-
-
 }

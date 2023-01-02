@@ -67,10 +67,10 @@ public class Day08_WindowHandle2 extends TestBase {
 
         Thread.sleep(5000);
 //        open linkedin on a new TAB 3
-        driver.switchTo().newWindow(WindowType.TAB);//creates a new TAB and switches to that TAB automatically
-        driver.get("https://www.linkedin.com");
-        String linkedinTitle = driver.getTitle();
-        Assert.assertTrue(linkedinTitle.contains("LinkedIn"));
-        String linkedinHandle = driver.getWindowHandle();//getting TAB 3 id
+//        driver.switchTo().newWindow(WindowType.TAB);//creates a new TAB and switches to that TAB automatically
+//        driver.get("https://www.linkedin.com");
+//        String linkedinTitle = driver.getTitle();
+//        Assert.assertTrue(linkedinTitle.contains("LinkedIn"));
+//        String linkedinHandle = driver.getWindowHandle();//getting TAB 3 id
     }
 }

@@ -17,7 +17,7 @@ public class Day07_IFrame extends TestBase {
         driver.get("https://the-internet.herokuapp.com/iframe");
 
 //        Verify the Bolded text contains “Editor”
-        //header is not in the iframe so do not switch to iframe. Test passed
+        //header is not in the iframe, so do not switch to iframe. Test passed
         String header = driver.findElement(By.xpath("//h3")).getText();
         Assert.assertTrue(header.contains("Editor"));
 

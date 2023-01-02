@@ -13,8 +13,7 @@ public class Day09_FileExistTest {
     Given
         Create a file on desktop
         C:\Users\yayte\Desktop\file.txt.txt
-        (cmd ile komut penceresini aç ve
-        dosyayı içine sürükle, path ekrana çıkar
+        (cmd ile komut penceresini aç ve dosyayı içine sürükle, path ekrana çıkar)
     When
         Copy the path of file
     Then

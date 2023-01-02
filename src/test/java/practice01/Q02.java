@@ -1,4 +1,4 @@
-package DT_Selenium.practice01;
+package practice01;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

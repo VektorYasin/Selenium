@@ -1,4 +1,4 @@
-package DT_Selenium.practice01;
+package practice01;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Before;
