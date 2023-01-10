@@ -25,7 +25,7 @@ public class CloseAllChildBrowsersONLY extends TestBase {
             String title = driver.getTitle();
 
         /*
-        compare the window id of all the browser swith the Parent browser windowid,
+        compare the window id of all the browser switch the Parent browser windowid,
         if it is not equal,then only close the browser windows.
         */
 

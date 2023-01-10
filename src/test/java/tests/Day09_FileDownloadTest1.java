@@ -30,7 +30,7 @@ public class Day09_FileDownloadTest1 extends TestBase {
             driver.findElement(By.partialLinkText("code.docx")).click();
 
             //Verify if the file downloaded successfully
-            String userHome = System.getProperty("user.home");//User home directory
+            String userHome = System.getProperty("user.home");//User home directory ile dynamic path olustur.
 
             boolean isDownloaded =Files.exists(Paths.get(userHome + "/Downloads/b10 all test cases, code.docx"));
             assertTrue(isDownloaded);

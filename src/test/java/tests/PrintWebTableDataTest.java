@@ -19,10 +19,11 @@ public class PrintWebTableDataTest extends TestBase {
         driver.get("https://the-internet.herokuapp.com/tables");
 
         //String xpath = "//table[@id='table1']//tr["+rowNum+"]//td["+colNum+"]";
-        ////table[@id='table1']//tr[3]//td[1]
+        //  //table[@id='table1']//tr[3]//td[1]
 
 
-        List<WebElement> allData = driver.findElements(By.xpath("//table[@id='table1']//tr["+rowNum+"]//td["+colNum+"]"));
+        List<WebElement> allData = driver.
+                findElements(By.xpath("//table[@id='table1']//tr["+rowNum+"]//td["+colNum+"]"));
 
         for (WebElement cellData : allData) {
             System.out.println("RowColNum " + rowNum + colNum + " => " + cellData.getText());

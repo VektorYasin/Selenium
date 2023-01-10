@@ -7,8 +7,10 @@ public class Day02_JUnitAnnotations {
     /*
     1.so far we kept using main method
     2.we no longer need to use main method to create test case with JUnit
+
     3. @Test is used for to create test cases
     4. All @Test methods must be void.
+
     5.@Before: runs before each @Test class
     6.@After: runs after each @Test class.
      */

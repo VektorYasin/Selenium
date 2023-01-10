@@ -21,6 +21,7 @@ public class Day10_AutoComplete extends TestBase {
     public void autoCompleteTest(){
 
         driver.get("https://testcenter.techproeducation.com/index.php?page=autocomplete");
+
         //    When user type “uni” in the search box
         driver.findElement(By.id("myCountry")).sendKeys("uni");
 

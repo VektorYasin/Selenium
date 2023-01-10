@@ -35,7 +35,7 @@ what s your approach for automation?
 -then I do manual testing First
 -if all good, then I start automation testing.
 -if I find a bug/defect, then I talk to dev, dev fixes issue and I retest
-- when the automation is completed, I prepare report for  the user story,my automation script generates html report for us.
+- when the automation is completed, I prepare report for the user story,my automation script generates html report for us.
   I upload the reports to Jira.
 - for manual test cases, I manually take screenshots, prepare reports and attach them to Jira
   what do you do when your test case pass?

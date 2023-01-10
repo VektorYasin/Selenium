@@ -50,6 +50,7 @@ public class Day03_Locators {
         //Assert login is successful
         //https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
         boolean actualValue= driver.getCurrentUrl().contains("dashboard");
+
         assertTrue(actualValue);
 
     }

@@ -17,6 +17,7 @@ public class Day12_WebTables extends TestBase {
 
 //        Task 1 : Print the entire table
         System.out.println("PRINT ENTIRE TABLE***");
+
         logger.info("Printing the webtable information");
 
         String entireTable = driver.findElement(By.xpath("//table[@id='table1']")).getText();
@@ -25,6 +26,7 @@ public class Day12_WebTables extends TestBase {
         List<WebElement> allTableElements = driver.findElements(By.xpath("//table[@id='table1']//td"));
         for (WebElement eachElement : allTableElements) {
             System.out.println(eachElement.getText());
+
             logger.info(eachElement.getText());
         }
 

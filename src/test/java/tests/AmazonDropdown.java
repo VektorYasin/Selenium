@@ -71,11 +71,10 @@ public class AmazonDropdown {
 //        String nameOfFourthOption = select.getFirstSelectedOption().getText();
 //        assertEquals("Amazon Devices", nameOfFourthOption);
 
-        // .
-
         System.out.println("*******************************************");
 
         System.out.println("Print all the dropdown options- getOptions() method returns the List<WebElement>. Using loop, print all options");
+
         List<WebElement> allOptions = select.getOptions();
 
         for (WebElement eachOption : allOptions) {
@@ -86,6 +85,7 @@ public class AmazonDropdown {
         System.out.println("*******************************************");
 
         System.out.println("Print the total number of options in the dropdown");
+
         int numberOfOptions = select.getOptions().size();
         System.out.println("numberOfOptions = " + numberOfOptions);
         int expectedNumberOfOptions = 28;
@@ -102,10 +102,10 @@ public class AmazonDropdown {
 
                 appliancesIsOption = true;
                 System.out.println("true");
+            } else {
+                System.out.println("false");
             }
         }
-        System.out.println("false");
-
 
         System.out.println("*******************************************");
 
@@ -118,18 +118,20 @@ public class AmazonDropdown {
         for (WebElement optionsElement : optionsOrder) {
             options.add(optionsElement.getText());//seçenekleri bu listeye attık
         }
+
         options.remove("All Departments");//seçenek olmayanı çıkardık
         System.out.println("options = " + options);//options listesini yazdırdık
 
-        List<String> tempList=new ArrayList<>(options);//options listesini geçici listeye aktardık
-        Collections.sort(tempList);//geçici listeyi sortladık
-        System.out.println("Sorted List = "+ tempList);
+        List<String> tempList = new ArrayList<>(options);//options listesini geçici listeye aktardık
 
-        boolean sortedAscending=options.equals(tempList);//dropdown secenekleri sort edilmiş liste ile eşit
-        if(sortedAscending){ //if (true) loopa girer.
+        Collections.sort(tempList);//geçici listeyi sortladık
+        System.out.println("Sorted List = " + tempList);
+
+        boolean sortedAscending = options.equals(tempList);//dropdown secenekleri sort edilmiş liste ile eşit
+        if (sortedAscending) { //if (true) loopa girer.
             System.out.println("list is sorted");
-        }else
+        } else {
             System.out.println("list is not sorted");
+        }
     }
 }
-

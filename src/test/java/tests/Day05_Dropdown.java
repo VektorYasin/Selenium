@@ -16,7 +16,9 @@ import static org.junit.Assert.assertTrue;
 
 
 public class Day05_Dropdown {
+
     WebDriver driver;
+
     @Before
     public void setUp(){
         WebDriverManager.chromedriver().setup();
@@ -30,7 +32,7 @@ public class Day05_Dropdown {
 //    select Option 1 by index from the dropdown
 //        1. locate the dropdown
         WebElement dropdown = driver.findElement(By.id("dropdown"));
-//        2. Create Select object cause dropdown is in the select tag. this is for only dropdowns
+//        2. Create Select object because dropdown is in the select tag. this is for only dropdowns
         Select select = new Select(dropdown);
 //        3. Select any option using the select object
         select.selectByIndex(1); // index starts at 0

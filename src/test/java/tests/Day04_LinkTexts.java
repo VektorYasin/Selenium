@@ -16,6 +16,7 @@ import static org.junit.Assert.*;
 public class Day04_LinkTexts {
 
     WebDriver driver;
+
     @Before
     public void setUp(){
         WebDriverManager.chromedriver().setup();
@@ -39,7 +40,7 @@ public class Day04_LinkTexts {
         //message only will be visible if test case fails
     }
     /*
-    LinkText and PartialLinkText are case sensitive.
+    LinkText and PartialLinkText are case-sensitive.
      */
     @Test
     public void LMSPagePartialLinkText(){
@@ -53,8 +54,11 @@ public class Day04_LinkTexts {
 
         WebElement loginElement= driver.findElement(By.linkText("Login/Register"));
         assertTrue(loginElement.isDisplayed());
+
         //isDisplayed() returns TRUE if that element is on the page
+
         //returns false if element is not displayed on the page
+
         //assertTrue(driver.findElement(By.linkText("Login/Register")).isDisplayed());
 
     }

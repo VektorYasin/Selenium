@@ -17,6 +17,7 @@ public class Day03_Asertions {
     assertFalse(false);--pass
     assertFalse(true);--fail
      */
+
     Assert.assertEquals(1, 5);//FAIl (execution stops here, because of hard assertion
 
         //verification
@@ -35,15 +36,20 @@ public class Day03_Asertions {
     Assert.assertFalse(("Java".contains("j")));//true  pass
 
     //what is the difference between "test assertion" and "test verification"?
+
     //Test execution stops if one of the assertion fails. This is hard assertion
     //test execution continues even if test verification fails.
+
     //verification is like "IF STATEMENT".
     //assertion stops after assertion fails. Verification continues even after fails.
-    //Jnuit assertions are hard assertion.
+
+    //Junit assertions are hard assertion.
     //If statement is verification.
+
     //TestNG has soft assertion as well.
-    //hard assertion is mostly used in market. ıt is preffered.
+    //hard assertion is mostly used in market. it is preferred.
     //to fix the issue, use hard assertion.
+
     //Hard assertion: If the execution stops in failure, it is called as hard assertion
     //verification: if the execution continues, it is called as verification.
 

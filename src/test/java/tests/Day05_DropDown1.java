@@ -1,4 +1,4 @@
-package DT_Selenium;
+package tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
 
-public class Day05_DropDown {
+public class Day05_DropDown1 {
     WebDriver driver;
 
     @Before

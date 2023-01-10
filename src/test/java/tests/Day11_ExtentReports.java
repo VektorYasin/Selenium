@@ -23,7 +23,7 @@ public class Day11_ExtentReports extends TestBase {
     @BeforeClass
     public static void extentReportsSetUp() {
     /*
-    Create Report Path
+    Create Report Paths
     Create HTML report in the path
     create extent reports object for generating the Entire reports with configuration
     Add custom System Info
@@ -32,8 +32,10 @@ public class Day11_ExtentReports extends TestBase {
     Create extent test
     */
         //      Create Report Path
-        String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting the current local date and time
-        String path = System.getProperty("user.dir") + "/test-output/reports/" + currentTime + "html_report.html";
+        String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+        //getting the current local date and time
+        String path = System.getProperty("user.dir") + "/test-output/reports/" +
+                      currentTime + "html_report.html";
 
         //      Create HTML report in the path
         extentHtmlReporter = new ExtentHtmlReporter(path);
@@ -54,8 +56,8 @@ public class Day11_ExtentReports extends TestBase {
 
         //      Done With Configuration(attach Reporter)
         extentReports.attachReporter(extentHtmlReporter);
-        //SUMMARY: extentReports and extentHtmlReporter are used to add custom information on the report andd create the report in a PATH
-
+        //SUMMARY: extentReports and extentHtmlReporter are used to add custom information
+        // on the report and create the report in a PATH
 
         //      Create extent test
         extentTest = extentReports.createTest("Extent Reporter", "This is my Smoke Test Report");
@@ -84,7 +86,7 @@ public class Day11_ExtentReports extends TestBase {
         //pass is used to mark the step as PASSED
         extentTest.pass("PASS");
 
-        //info is used to give an information for the step
+        //Info is used to give an information for the step
         extentTest.info("INFORMATION");
 
         //fail is used to mark the step as FAILED
@@ -100,6 +102,7 @@ public class Day11_ExtentReports extends TestBase {
 
     @AfterClass
     public static void extentReportTearDown() {
+
         //      Generate the report
         extentReports.flush();
 

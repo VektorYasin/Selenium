@@ -27,7 +27,8 @@ public class PrintListValues_SortedOrder extends TestBase {
         System.out.println(count);
         System.out.println("-----print the values in the list----");
 
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
+
         for (WebElement option : allOptions) {
             String text = option.getText();
             System.out.println(text);

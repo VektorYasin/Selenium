@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
 public class Day10_FileUpload extends TestBase {
+
     @Test
     public void fileUploadTest() throws InterruptedException {
         driver.get("https://the-internet.herokuapp.com/upload");
@@ -17,12 +18,10 @@ public class Day10_FileUpload extends TestBase {
 
 //        2. select a file from your computer
         String userHOME = System.getProperty("user.home");
-
         String pathOfFile = userHOME + "/Desktop/logo.jpeg";
 
 //        Sending the path of the file that I want to upload.
-//        we can use send keys cause the input type file combination
-
+//        we can use send keys because the input type file combination
         chooseAFileButton.sendKeys(pathOfFile);
 
 //        3. then locate and click upload
@@ -34,15 +33,15 @@ public class Day10_FileUpload extends TestBase {
     }
     /*
     How do you upload a file with selenium?
-    - first selenium has limitation in automation of files.
-    but file upload can be done with seleinum.
-    - we locate the choose file and sendkeys funtion to send the path of the file
+    -- first selenium has limitation in automation of files.
+    but file upload can be done with selenium.
+    -- we locate the choose file and use sendkeys function to send the path of the file
     then we click upload button to upload the fhe file.
-    -path of file should be dynamic -use System.getProperty("user.home")
+    -- path of file should be dynamic
+    -- use System.getProperty("user.home")
     -LIMITATION:
     Selenium has limitation automation DESKTOP APPS
-    For example, we can not find path of files, or verify if file exists on out machines with selenum
+    For example, we cannot find path of files, or verify if file exists on out machines with selenium
     Instead we use java File libraries
-
      */
 }

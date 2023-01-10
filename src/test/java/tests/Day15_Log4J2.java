@@ -8,6 +8,7 @@ public class Day15_Log4J2 {
 
     //Create Object
     private static Logger logger= LogManager.getLogger(Day15_Log4J2.class.getName());
+
     @Test
     public void log44jTest(){
       //use logger object to log/print information

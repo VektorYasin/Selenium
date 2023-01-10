@@ -14,6 +14,7 @@ import java.time.Duration;
 import static org.junit.Assert.assertTrue;
 
 public class Day03_Checkbox {
+
     WebDriver driver;
 
     @Before
